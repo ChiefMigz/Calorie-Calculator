@@ -10,9 +10,10 @@ class CalorieCalulator:
         self.topWindow = tkinter.Frame(self.mainWindow)
         self.middleWindow = tkinter.Frame(self.mainWindow)
         self.bottomWindow = tkinter.Frame(self.mainWindow)
+        self.buttonWindow = tkinter.Frame(self.mainWindow)
         
         #Entry Weight Entry
-        self.startingWeightLabel = tkinter.Label(self.topWindow, text="Starting weight: ", type="int")
+        self.startingWeightLabel = tkinter.Label(self.topWindow, text="Starting weight: ")
         self.startingWeightEntry = tkinter.Entry(self.topWindow)
         
         #Calorie Cut/Gain
@@ -29,10 +30,15 @@ class CalorieCalulator:
         self.gainWeightRb = tkinter.Radiobutton(self.middleWindow, text="Gain Weight", value=1, variable=self.userWeightPlanChoice)
         self.loseWeightRb = tkinter.Radiobutton(self.middleWindow, text="Lose Weight", value=2, variable=self.userWeightPlanChoice)
         
+        #Checkboxes
+        self.inKiloVar = tkinter.IntVar()
+        self.inPoundVar = tkinter.IntVar()
+        self.inKiloCb = tkinter.Checkbutton(self.bottomWindow, onvalue=1, variable=self.inKiloVar, text="Show weight in Kg")
+        self.inPoundCb = tkinter.Checkbutton(self.bottomWindow, onvalue=1, variable=self.inPoundVar, text="Show weight in Lb")
         
-        self.topWindow.pack(side="top", pady=10, padx=10, anchor="w")
+        self.topWindow.pack(pady=10, padx=10, anchor="w")
         self.middleWindow.pack(anchor="w", padx=10, pady=10)
-        self.bottomWindow.pack(side="bottom")
+        self.bottomWindow.pack(anchor="w", padx=10)
         
         #Placing top window items
         self.startingWeightLabel.grid(row=1, column=1, pady=10)
@@ -47,6 +53,8 @@ class CalorieCalulator:
         self.loseWeightRb.pack()
         
         #Placing bottom window items
+        self.inKiloCb.pack()
+        self.inPoundCb.pack(pady=10)
         
         tkinter.mainloop()
 
