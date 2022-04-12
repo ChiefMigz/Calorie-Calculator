@@ -40,6 +40,7 @@ class CalorieCalulator:
         self.applyBtn = tkinter.Button(self.buttonWindow, text="Apply")
         self.calculateBtn = tkinter.Button(self.buttonWindow, text="Calculate")
         
+        #Packing windows
         self.topWindow.pack(pady=10, padx=10, anchor="w")
         self.middleWindow.pack(anchor="w", padx=10, pady=10)
         self.bottomWindow.pack(anchor="w", padx=10, pady=10)
