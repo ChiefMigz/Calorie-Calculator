@@ -4,7 +4,7 @@ import tkinter
 class CalorieCalulator:
     def __init__(self):
         self.mainWindow = tkinter.Tk()
-        self.mainWindow.geometry("400x400")
+        self.mainWindow.geometry("280x380")
         self.mainWindow.title("Calorie Calculator")
         
         self.topWindow = tkinter.Frame(self.mainWindow)
@@ -36,9 +36,14 @@ class CalorieCalulator:
         self.inKiloCb = tkinter.Checkbutton(self.bottomWindow, onvalue=1, variable=self.inKiloVar, text="Show weight in Kg")
         self.inPoundCb = tkinter.Checkbutton(self.bottomWindow, onvalue=1, variable=self.inPoundVar, text="Show weight in Lb")
         
+        #Buttons
+        self.applyBtn = tkinter.Button(self.buttonWindow, text="Apply")
+        self.calculateBtn = tkinter.Button(self.buttonWindow, text="Calculate Button")
+        
         self.topWindow.pack(pady=10, padx=10, anchor="w")
         self.middleWindow.pack(anchor="w", padx=10, pady=10)
-        self.bottomWindow.pack(anchor="w", padx=10)
+        self.bottomWindow.pack(anchor="w", padx=10, pady=10)
+        self.buttonWindow.pack(anchor="w", padx=10, pady=10)
         
         #Placing top window items
         self.startingWeightLabel.grid(row=1, column=1, pady=10)
@@ -55,6 +60,10 @@ class CalorieCalulator:
         #Placing bottom window items
         self.inKiloCb.pack()
         self.inPoundCb.pack(pady=10)
+        
+        #Placing button window items
+        self.applyBtn.pack(side="left")
+        self.calculateBtn.pack(side="right", padx=10)
         
         tkinter.mainloop()
 
