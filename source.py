@@ -14,15 +14,15 @@ class CalorieCalulator:
         
         #Entry Weight Entry
         self.startingWeightLabel = tkinter.Label(self.topWindow, text="Starting weight: ")
-        self.startingWeightEntry = tkinter.Entry(self.topWindow)
+        self.startingWeightEntry = tkinter.Entry(self.topWindow,width=12)
         
         #Calorie Cut/Gain
         self.calorieCutLabel = tkinter.Label(self.topWindow, text="Calorie Cut/Gain:")
-        self.calorieCutEntry= tkinter.Entry(self.topWindow)
+        self.calorieCutEntry= tkinter.Entry(self.topWindow, width=12)
         
         #Target Month (int)
         self.targetMonthLabel = tkinter.Label(self.topWindow, text="Enter no. of month/s: ")
-        self.targetMonthEntry = tkinter.Entry(self.topWindow)
+        self.targetMonthEntry = tkinter.Entry(self.topWindow, width=12)
         
         #Lose weight or gain weight radio button
         self.userWeightPlanChoice = tkinter.IntVar()
