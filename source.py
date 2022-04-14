@@ -74,7 +74,7 @@ class CalorieCalulator:
     
     def apply(self):
         calorieCutPerDay = float(self.calorieCutEntry.get())
-        weightChangePerMonth = 4
+        weightChangePerMonth = calorieCutPerDay / 300
         initialWeight = float(self.startingWeightEntry.get())
         self.weightProgress.append(initialWeight)
         for i in range(int(self.targetMonthEntry.get())):
@@ -109,5 +109,6 @@ class CalorieCalulator:
 
         resultsListBox.config(yscrollcommand = scrollBar.set, bg="lightgray",border=0)
         scrollBar.config(command = resultsListBox.yview)
+
 if __name__ == '__main__':
     CalorieCalulator()  
