@@ -65,8 +65,8 @@ class CalorieCalulator:
         self.inPoundCb.pack(pady=10)
         
         #Placing button window items
-        self.applyBtn.pack(side="left")
-        self.calculateBtn.pack(side="right", padx=10)
+        self.applyBtn.pack(side=tkinter.LEFT)
+        self.calculateBtn.pack(side=tkinter.RIGHT, padx=10)
         
         self.weightProgress = list()
         
