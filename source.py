@@ -38,8 +38,8 @@ class CalorieCalulator:
         self.inPoundCb = tkinter.Checkbutton(self.bottomWindow, onvalue=1, variable=self.inPoundVar, text="Show weight in Lb")
         
         #Buttons
-        self.applyBtn = tkinter.Button(self.buttonWindow, text="Apply", command=self.apply)
-        self.calculateBtn = tkinter.Button(self.buttonWindow, text="Calculate")
+        self.applyBtn = tkinter.Button(self.buttonWindow, text="Apply", relief = 'ridge', command=self.apply)
+        self.calculateBtn = tkinter.Button(self.buttonWindow, relief = 'ridge', text="Calculate")
         
         #Packing windows
         self.topWindow.pack(pady=10, padx=10, anchor="w")
